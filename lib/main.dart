@@ -41,13 +41,14 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
           appBar: AppBar(
             title: Text(
-              '디벨스',
-              style: TextStyle(color: darkHeaderClr),
+              'LEAPERS',
+              style: TextStyle(
+                  color: darkHeaderClr, letterSpacing: -1, fontSize: 22),
             ),
             actions: [
               Icon(CupertinoIcons.search),
               CircleAvatar(
-                backgroundColor: bluishClr,
+                backgroundColor: bgImgClr,
               )
             ],
           ),
