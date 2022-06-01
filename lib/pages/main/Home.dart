@@ -54,28 +54,35 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               )
             ],
           ),
-          Container(
-              child: Align(
-            alignment: Alignment.centerLeft,
-            child: TabBar(
-                labelPadding: EdgeInsets.symmetric(horizontal: 20),
-                controller: _tabController,
-                labelColor: darkHeaderClr,
-                unselectedLabelColor: darkHeaderClr.withOpacity(0.6),
-                indicatorSize: TabBarIndicatorSize.label,
-                indicatorColor: bluishClr,
-                isScrollable: true,
-                tabs: [
-                  Tab(
-                    text: '오프라인',
-                  ),
-                  Tab(
-                    text: '온라인',
-                  ),
-                ]),
-          )),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, top: 5),
+            child: Container(
+                child: Align(
+              alignment: Alignment.centerLeft,
+              child: TabBar(
+                  indicator: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: bluishClr),
+                  labelPadding: EdgeInsets.symmetric(horizontal: 30),
+                  controller: _tabController,
+                  labelColor: Colors.white,
+                  labelStyle:
+                      TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                  unselectedLabelColor: darkHeaderClr.withOpacity(0.6),
+                  indicatorColor: bluishClr,
+                  isScrollable: true,
+                  tabs: [
+                    Tab(
+                      text: '오프라인',
+                    ),
+                    Tab(
+                      text: '온라인',
+                    ),
+                  ]),
+            )),
+          ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           Expanded(
             child: Container(
