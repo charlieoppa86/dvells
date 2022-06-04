@@ -12,7 +12,14 @@ class _NotiPageState extends State<NotiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('알림'),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
+        child: Text(
+          '알림',
+          style: TextStyle(
+              fontSize: 26, letterSpacing: -2, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }
